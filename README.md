@@ -11,10 +11,7 @@ Scrapping des catégories et articles du site web TechCrunch et création d'une 
 - [Captures d'écran](#captures-décran)
 - [Prérequis](#prérequis)
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
-
+  
 ## Aperçu
 
 Ce projet est une solution complète pour le scraping, le stockage, et la visualisation de données d'articles de TechCrunch, un site web leader dans l'actualité technologique. Il a été conçu pour récupérer des articles en fonction de leurs catégories (comme la crypto, les applications, etc.) et les stocker dans une base de données choisie pour une analyse et une visualisation ultérieures. Le projet comprend également un prototype de dashboard pour une représentation visuelle des données, ainsi qu'une API pour faciliter l'accès aux données stockées.
@@ -24,7 +21,7 @@ Ce projet est une solution complète pour le scraping, le stockage, et la visual
 - **Scraping Dynamique :** 
   Le projet intègre un outil de scraping capable de récupérer les articles de différentes catégories de TechCrunch.
 - **Stockage de Données :** 
-  Les articles récupérés sont stockés dans une base de données, offrant une gestion efficace et sécurisée des données.
+  Les articles récupérés sont utilisés pour créer deux fichier .sql d'insertion de catégories et articles qui devront être executé par la suite pour insérer dans la base de données. catégories -> articles.
 - **Dashboard Interactif :** 
   Un tableau de bord est mis à disposition pour visualiser et analyser les données des articles.
 - **API :** 
@@ -32,9 +29,6 @@ Ce projet est une solution complète pour le scraping, le stockage, et la visual
 - **Documentation Détaillée :** 
   Le projet est accompagné d'une documentation complète, facilitant sa prise en main et son utilisation.
 
-## Captures d'écran
-
-[Ajoutez des captures d'écran ou des images pour illustrer votre projet si nécessaire.]
 
 ## Prérequis
 
@@ -96,14 +90,19 @@ Pour installer et configurer ce projet localement, suivez les étapes ci-dessous
      ```
      python Web_Scrapping.py
      ```
+6. **Exécuter les scripts d'insertions** :
+   Suivre les étapes suivantes :
+   - Exécutez le script de création de tables table_creation.sql
+   - Exécuter le script d'insertion insert_categories.sql
+   - Exécuter le script d'insertion insert_articles.sql
 
-6. **Démarrage de l'API** :
+8. **Démarrage de l'API** :
    - Lancez l'API pour accéder aux données stockées :
      ```
      streamlit run app.py
      ```
 
-7. **(Optionnel) Jupyter Notebook** :
+9. **(Optionnel) Jupyter Notebook** :
    - Si vous souhaitez utiliser Jupyter Notebook pour visualiser ou analyser les données, assurez-vous qu'il est installé :
      ```
      pip install notebook
