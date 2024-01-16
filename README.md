@@ -35,6 +35,8 @@ Ce projet est une solution complète pour le scraping, le stockage, et la visual
 - selenium (version 4.15.2 ou supérieure)
 - streamlit (version 1.30.0 ou supérieure)
 - seaborn (version 0.13.1 ou supérieure)
+- pandas (version 0.3.1 ou supérieure)
+- cx_Oracle (version 8.3.0 ou supérieure)
 - matplotlib (version 3.8.2 ou supérieure)
 - google chrome (version 114.0.5735.90 ou inférieure)
 - Oracle Database (CMD ou IDE), sqldeveloper a été utilisé ici
@@ -78,6 +80,8 @@ Pour installer et configurer ce projet localement, suivez les étapes ci-dessous
      pip install  streamlit
      pip install  seaborn
      pip install  matplotlib
+     pip install  pandas
+     pip install  cx_Oracle
      ```
 
 4. **Configuration de la Base de Données** :
