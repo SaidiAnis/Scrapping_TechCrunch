@@ -1,119 +1,115 @@
-# Scrapping_TechCrunch
+# TechCrunch Scraping
 
-## Nom du Projet
+## Project Name
 
-Scrapping des catégories et articles du site web TechCrunch et création d'une petite api.
+Scraping TechCrunch website categories and articles and creating a small API.
 
-## Table des matières
+## Table of Contents
 
-- [Aperçu](#aperçu)
-- [Fonctionnalités](#fonctionnalités)
-- [Captures d'écran](#captures-décran)
-- [Prérequis](#prérequis)
+- [Overview](#overview)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Prerequisites](#prerequisites)
 - [Installation](#installation)
   
-## Aperçu
+## Overview
 
-Ce projet est une solution complète pour le scraping, le stockage, et la visualisation de données d'articles de TechCrunch, un site web leader dans l'actualité technologique. Il a été conçu pour récupérer des articles en fonction de leurs catégories (comme la crypto, les applications, etc.) et les stocker dans une base de données choisie pour une analyse et une visualisation ultérieures. Le projet comprend également un prototype de dashboard pour une représentation visuelle des données, ainsi qu'une API pour faciliter l'accès aux données stockées.
+This project provides a complete solution for scraping, storing, and visualizing article data from TechCrunch, a leading technology news website. It is designed to retrieve articles based on their categories (such as crypto, apps, etc.) and store them in a selected database for further analysis and visualization. The project also includes a dashboard prototype for data visualization and an API to facilitate access to the stored data.
 
-## Fonctionnalités
+## Features
 
-- **Scraping Dynamique :** 
-  Le projet intègre un outil de scraping capable de récupérer les articles de différentes catégories de TechCrunch.
-- **Stockage de Données :** 
-  Les articles récupérés sont utilisés pour créer deux fichier .sql d'insertion de catégories et articles qui devront être executé par la suite pour insérer dans la base de données. catégories -> articles.
-- **Dashboard Interactif :** 
-  Un tableau de bord est mis à disposition pour visualiser et analyser les données des articles.
-- **API :** 
-  Le projet inclut une API permettant une visualisation de la base de données.
-- **Documentation Détaillée :** 
-  Le projet est accompagné d'une documentation complète, facilitant sa prise en main et son utilisation.
+- **Dynamic Scraping**: 
+  The project includes a scraping tool capable of retrieving articles from various TechCrunch categories.
+- **Data Storage**: 
+  The retrieved articles are used to create two SQL insertion files for categories and articles, which should be executed afterward to insert them into the database (categories -> articles).
+- **Interactive Dashboard**: 
+  A dashboard is provided to visualize and analyze article data.
+- **API**: 
+  The project includes an API for viewing data in the database.
+- **Detailed Documentation**: 
+  The project comes with complete documentation, making it easy to set up and use.
 
 
-## Prérequis
+## Prerequisites
 
-- selenium (version 4.15.2 ou supérieure)
-- streamlit (version 1.30.0 ou supérieure)
-- seaborn (version 0.13.1 ou supérieure)
-- pandas (version 0.3.1 ou supérieure)
-- cx_Oracle (version 8.3.0 ou supérieure)
-- matplotlib (version 3.8.2 ou supérieure)
-- google chrome (version 114.0.5735.90 ou inférieure)
-- Oracle Database (CMD ou IDE), sqldeveloper a été utilisé ici
-- Python (version 3.10.4 ou supérieure)
-- (optionnel) jupyter notebook pour lire le fichier .ipynb 
+- selenium (version 4.15.2 or higher)
+- streamlit (version 1.30.0 or higher)
+- seaborn (version 0.13.1 or higher)
+- pandas (version 0.3.1 or higher)
+- cx_Oracle (version 8.3.0 or higher)
+- matplotlib (version 3.8.2 or higher)
+- google chrome (version 114.0.5735.90 or lower)
+- Oracle Database (CMD or IDE); sqldeveloper was used here
+- Python (version 3.10.4 or higher)
+- (optional) Jupyter Notebook to read the .ipynb file 
 
 ## Installation
 
-Pour installer et configurer ce projet localement, suivez les étapes ci-dessous :
+To install and set up this project locally, follow the steps below:
 
-1. **Cloner le Répertoire** :
-   - Ouvrez un terminal et clonez le répertoire du projet en utilisant :
+1. **Clone the Repository**:
+   - Open a terminal and clone the project repository using:
      ```
-     git clone [URL_DU_REPERTOIRE_DU_PROJET]
+     git clone [YOUR_REPOSITORY_URL]
      ```
-   - Accédez au répertoire du projet :
+   - Navigate to the project directory:
      ```
      cd Scrapping_TechCrunch
      ```
 
-2. **Configuration de l'Environnement** :
-   - Assurez-vous que Python est installé sur votre machine. Vous pouvez le télécharger depuis [le site officiel de Python](https://www.python.org/downloads/).
-   - Il est recommandé d'utiliser un environnement virtuel pour gérer les dépendances. Créez un environnement virtuel en exécutant :
+2. **Environment Setup**:
+   - Ensure that Python is installed on your machine. You can download it from [the official Python website](https://www.python.org/downloads/).
+   - It’s recommended to use a virtual environment for managing dependencies. Create a virtual environment by running:
      ```
      python -m venv venv
      ```
-   - Activez l'environnement virtuel :
-     - Sur Windows :
+   - Activate the virtual environment:
+     - On Windows:
        ```
        .\venv\Scripts\activate
        ```
-     - Sur Unix ou MacOS :
+     - On Unix or MacOS:
        ```
        source venv/bin/activate
        ```
 
-3. **Installation des Dépendances** :
-   - Installez toutes les dépendances nécessaires en utilisant pip :
+3. **Install Dependencies**:
+   - Install all necessary dependencies using pip:
      ```
-     pip install  selenium
-     pip install  streamlit
-     pip install  seaborn
-     pip install  matplotlib
-     pip install  pandas
-     pip install  cx_Oracle
+     pip install selenium streamlit seaborn matplotlib pandas cx_Oracle
      ```
 
-4. **Configuration de la Base de Données** :
-   - Assurez-vous que Oracle Database est installé et configuré sur votre machine.
-   - Créez une nouvelle base de données ou utilisez une existante pour stocker les données scrapées.
-   - Modifiez les fichiers de configuration du projet pour pointer vers votre base de données.
+4. **Database Configuration**:
+   - Make sure Oracle Database is installed and configured on your machine.
+   - Create a new database or use an existing one to store scraped data.
+   - Update the project’s configuration files to point to your database.
 
-5. **(Optionnel) Lancer le Scraper** :
-   - Exécutez le script de scraping pour commencer à récupérer les données :
+5. **(Optional) Run the Scraper**:
+   - Run the scraping script to start fetching data:
      ```
      python Web_Scrapping.py
      ```
-6. **Exécuter les scripts d'insertions** :
-   Suivre les étapes suivantes :
-   - Exécutez le script de création de tables table_creation.sql
-   - Exécuter le script d'insertion insert_categories.sql
-   - Exécuter le script d'insertion insert_articles.sql
 
-8. **Démarrage de l'API** :
-   - Lancez l'API pour accéder aux données stockées :
+6. **Execute Insertion Scripts**:
+   Follow these steps:
+   - Run the table creation script `table_creation.sql`
+   - Run the insertion script for categories `insert_categories.sql`
+   - Run the insertion script for articles `insert_articles.sql`
+
+8. **Start the API**:
+   - Launch the API to access stored data:
      ```
      streamlit run app.py
      ```
 
-9. **(Optionnel) Jupyter Notebook** :
-   - Si vous souhaitez utiliser Jupyter Notebook pour visualiser ou analyser les données, assurez-vous qu'il est installé :
+9. **(Optional) Jupyter Notebook**:
+   - If you want to use Jupyter Notebook for data visualization or analysis, ensure it’s installed:
      ```
      pip install notebook
      ```
-   - Lancez Jupyter Notebook :
+   - Launch Jupyter Notebook:
      ```
      jupyter notebook
      ```
 
-Vous pouvez maintenant utiliser le projet pour scraper, stocker et visualiser les données d'articles de TechCrunch !
+You can now use this project to scrape, store, and visualize TechCrunch article data!
