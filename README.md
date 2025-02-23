@@ -1,7 +1,5 @@
 # TechCrunch Scraping
 
-## Project Name
-
 Scraping TechCrunch website categories and articles and creating a small API.
 
 ## Table of Contents
